@@ -1,0 +1,23 @@
+package com.gl.bstlab;
+
+public class NodeInsertionDetails {
+	
+	Node parent;
+	NodeDirection nodeDirection;
+	
+	public Node getParent() {
+		return parent;
+	}
+	public void setParent(Node parent) {
+		this.parent = parent;
+	}
+	public NodeDirection getNodeDirection() {
+		return nodeDirection;
+	}
+	public void setNodeDirection(NodeDirection nodeDirection) {
+		this.nodeDirection = nodeDirection;
+	}
+	
+	
+
+}

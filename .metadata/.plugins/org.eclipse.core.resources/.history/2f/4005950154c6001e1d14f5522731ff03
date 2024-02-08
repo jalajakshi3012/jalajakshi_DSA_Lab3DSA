@@ -1,0 +1,68 @@
+package com.gl.bstlab;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class PairFinder {
+	
+	BinarySearchTree bst;
+	Integer sum;
+	Set<Integer> visitednodes;
+	
+	
+	
+	public PairFinder(BinarySearchTree bst, Integer sum) {
+		super();
+		this.bst = bst;
+		this.sum = sum;
+		this.visitednodes = new HashSet<>();
+	}
+	public BinarySearchTree getBst() {
+		return bst;
+	}
+	public void setBst(BinarySearchTree bst) {
+		this.bst = bst;
+	}
+	public Integer getSum() {
+		return sum;
+	}
+	public void setSum(Integer sum) {
+		this.sum = sum;
+	}
+	
+	void findAllPairs()
+	{
+		preOrderTraversal();
+	}
+	
+	void preOrderTraversal()
+	{
+		preOrderTraversalInternal(bst.getRoot());
+	}
+	
+	void preOrderTraversalInternal(Node aNode)
+	{
+		boolean found=false;
+		if(aNode==null)
+			return;
+
+		int difference=sum-aNode.getData();
+		if(visitednodes.contains(difference)) {
+			found=true;
+		System.out.println("Match Identified");
+		System.out.printf("[%d, %d]", aNode.getData(),difference);
+		System.out.println();
+		}
+		
+		
+		this.visitednodes.add(aNode.getData());
+		
+		preOrderTraversalInternal(aNode.left);
+		preOrderTraversalInternal(aNode.right);
+		if(found)
+		{
+			System.out.println("Nodes are not found");
+		}
+	}
+
+}

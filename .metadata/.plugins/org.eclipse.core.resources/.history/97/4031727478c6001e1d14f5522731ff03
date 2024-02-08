@@ -1,0 +1,7 @@
+package com.gl.bstlab;
+
+public enum NodeDirection {
+
+	left,
+	right;
+}

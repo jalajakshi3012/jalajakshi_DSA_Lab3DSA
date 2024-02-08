@@ -1,0 +1,13 @@
+package com.gl.bstlab;
+
+public class BinarSearchTree {
+	
+	Node root;
+
+	
+	NodeInsertionDetails constructInsertNodeDetails()
+	{
+		NodeInsertionDetails n=new NodeInsertionDetails();
+		return n;
+	}
+}

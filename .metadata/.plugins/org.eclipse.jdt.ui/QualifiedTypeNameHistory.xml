@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.gl.bstlab.NodeDirection"/>
+    <fullyQualifiedTypeName name="com.gl.bstlab.Node"/>
+    <fullyQualifiedTypeName name="com.gl.bstlab.NodeInsertionDetails"/>
+    <fullyQualifiedTypeName name="com.gl.bstlab.BinarSearchTree"/>
+    <fullyQualifiedTypeName name="com.gl.bstlab.BSTUtils"/>
+    <fullyQualifiedTypeName name="com.gl.bstlab.BinarySearchTree"/>
+</qualifiedTypeNameHistroy>

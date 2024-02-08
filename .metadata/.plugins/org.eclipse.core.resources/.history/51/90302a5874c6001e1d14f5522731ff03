@@ -1,0 +1,61 @@
+package com.gl.dsalab;
+
+import java.util.Set;
+
+public class BalancingBrackets {
+	String expression;
+	
+	
+	
+	public BalancingBrackets(String expression) {
+		super();
+		this.expression = expression;
+	}
+
+	void check()
+	{
+		if(expression.length()%2!=0)
+		{
+			System.out.println("The entered Strings do not contain Balanced Brackets");
+		}
+		
+		Set<Character> openBrackets=new HashSet<Character>
+	}
+
+	Character getCloseBracket(char input) {
+		if (input == '<')
+			return '>';
+
+		else if (input == '(')
+			return ')';
+
+		else if (input == '{')
+			return '}';
+
+		else if (input == '[')
+			return ']';
+
+		return ' ';
+
+	}
+	
+	Character getOpenBracket(char input) {
+		if (input == '>')
+			return '<';
+
+		else if (input == ')')
+			return '(';
+
+		else if (input == '}')
+			return '{';
+
+		else if (input == ']')
+			return '[';
+
+		return ' ';
+
+	}
+	
+	
+
+}

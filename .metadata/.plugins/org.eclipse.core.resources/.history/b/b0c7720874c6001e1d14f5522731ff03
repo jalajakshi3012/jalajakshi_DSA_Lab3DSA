@@ -1,0 +1,41 @@
+package com.gl.dsalab;
+
+public class BalancingBrackets {
+
+	Character getCloseBracket(char input) {
+		if (input == '<')
+			return '>';
+
+		else if (input == '(')
+			return ')';
+
+		else if (input == '{')
+			return '}';
+
+		else if (input == '[')
+			return ']';
+
+		return ' ';
+
+	}
+	
+	Character getOpenBracket(char input) {
+		if (input == '>')
+			return '<';
+
+		else if (input == ')')
+			return '(';
+
+		else if (input == '}')
+			return '{';
+
+		else if (input == ']')
+			return '[';
+
+		return ' ';
+
+	}
+	
+	
+
+}

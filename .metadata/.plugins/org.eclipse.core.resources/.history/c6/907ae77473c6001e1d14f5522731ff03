@@ -1,0 +1,22 @@
+package com.gl.dsalab;
+
+public class BalancingBrackets {
+	
+	
+	Character getCloseBracket(char input)
+	{
+		if(input=='<')
+			return '>';
+		
+		if(input=='(')
+			return ')';
+		
+		if(input=='{')
+			return '}';
+		
+		if(input=='[')
+			return ']';
+		
+	}
+
+}

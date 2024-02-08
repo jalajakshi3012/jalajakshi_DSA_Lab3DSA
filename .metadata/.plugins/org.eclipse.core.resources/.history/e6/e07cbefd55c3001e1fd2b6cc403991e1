@@ -1,0 +1,71 @@
+package com.gl.bstlab;
+
+public class BinarSearchTree {
+
+	Node root;
+
+	// root is null create a new node and make it as a root
+	// root is not null, get details from isertiondetails method
+	// make the relationship between parent node and child node
+
+	public Node getRoot() {
+		return root;
+	}
+
+	public void setRoot(Node root) {
+		this.root = root;
+	}
+
+	void insertNode(Integer data) {
+		Node newNode = new Node(data);
+		if (root == null) {
+			root = newNode;
+		}
+
+		NodeInsertionDetails nodeDetails = constructInsertNodeDetails(value);
+
+// 30
+		Node parentNode = nodeDetails.getParent();
+
+// RIGHT
+		String direction = nodeDetails.getNodeDirection();
+
+		if (direction.equals("LEFT")) {
+
+			parentNode.setLeft(newNode);
+		} else if (direction.equals("RIGHT")) {
+			parentNode.setRight(newNode);
+		}
+	}
+
+	NodeInsertionDetails constructInsertNodeDetails(Integer value) {
+		NodeInsertionDetails n = new NodeInsertionDetails();
+		traverse(root, value, n);
+
+		return n;
+	}
+
+	// traverse the tree, if node.value>data --traverse in the right else traverse
+	// left
+
+	void traverse(Node aNode, Integer data, NodeInsertionDetails insertNodeDetails) {
+		if (data <= aNode.getData()) {
+			Node leftNode = aNode.getLeft();
+			if (leftNode != null) {
+				traverse(leftNode, data, insertNodeDetails);
+			} else {
+				insertNodeDetails.setParent(aNode);
+				insertNodeDetails.setNodeDirection("left");
+			}
+		} else {
+			Node rightNode = aNode.getRight();
+			if (rightNode != null) {
+				traverse(rightNode, data, insertNodeDetails);
+			} else {
+				insertNodeDetails.setParent(aNode);
+				insertNodeDetails.setNodeDirection("right");
+			}
+		}
+	}
+
+}

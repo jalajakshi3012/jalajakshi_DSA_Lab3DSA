@@ -1,0 +1,12 @@
+package com.gl.bstlab;
+
+public class Node {
+	
+	Integer data;
+	Node left;
+	Node right;
+	
+	
+	
+
+}

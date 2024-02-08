@@ -1,0 +1,31 @@
+package com.gl.bstlab;
+
+public class BinarSearchTree {
+	
+	Node root;
+
+	//root is null create a  new node and make it as a root
+	//root is not null, get details from isertiondetails method
+	//make the relationship between parent node and child node
+	
+	void insertNode(int value) {
+		Node newNode=new Node(value);
+	if(root==null)
+	{
+		root=newNode;
+	}
+	
+	else
+	{
+		NodeInsertionDetails nodeDetails=constructInsertNodeDetails();
+		Node parentNode=nodeDetails.parent;
+		String direction=nodeDetails.getNodeDirection();
+	}
+	
+	}
+	NodeInsertionDetails constructInsertNodeDetails()
+	{
+		NodeInsertionDetails n=new NodeInsertionDetails();
+		return n;
+	}
+}

@@ -1,0 +1,10 @@
+package com.gl.bstlab;
+
+public class PairFinderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

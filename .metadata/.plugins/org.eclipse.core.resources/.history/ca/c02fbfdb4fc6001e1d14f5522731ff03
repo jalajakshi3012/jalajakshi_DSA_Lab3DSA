@@ -1,0 +1,41 @@
+package com.gl.bstlab;
+
+public class PairFinder {
+	
+	BinarySearchTree bst;
+	Integer sum;
+	
+	public BinarySearchTree getBst() {
+		return bst;
+	}
+	public void setBst(BinarySearchTree bst) {
+		this.bst = bst;
+	}
+	public Integer getSum() {
+		return sum;
+	}
+	public void setSum(Integer sum) {
+		this.sum = sum;
+	}
+	
+	void findAllPairs()
+	{
+		preOrderTraversal();
+	}
+	
+	void preOrderTraversal()
+	{
+		
+	}
+	
+	void preOrderTraversalInternal(Node aNode)
+	{
+		if(aNode==null)
+			return;
+		System.out.println(aNode);
+		
+		preOrderTraversalInternal(aNode.left);
+		preOrderTraversalInternal(aNode.right);
+	}
+
+}
